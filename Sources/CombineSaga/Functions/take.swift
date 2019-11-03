@@ -1,4 +1,4 @@
-func take<Action: Equatable>(
+public func take<Action: Equatable>(
     _ matching: Action,
     execute: @escaping (Action) -> Void
 ) -> (Action) -> Void {

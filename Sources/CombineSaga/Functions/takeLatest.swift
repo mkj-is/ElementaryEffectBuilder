@@ -1,6 +1,6 @@
 import Combine
 
-func takeLatest<Action: Equatable>(
+public func takeLatest<Action: Equatable>(
     _ matching: Action,
     execute: @escaping (Action) -> Cancellable
 ) -> (Action) -> Void {

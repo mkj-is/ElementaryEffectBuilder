@@ -1,6 +1,6 @@
 @_functionBuilder
-final class SingleParameterFunctionBuilder<Parameter> {
-    typealias Component = (Parameter) -> Void
+public final class SingleParameterFunctionBuilder<Parameter> {
+    public typealias Component = (Parameter) -> Void
 
     public static func buildBlock(_ components: Component...) -> Component {
         combine(components)
