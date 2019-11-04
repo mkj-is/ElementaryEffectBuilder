@@ -1,3 +1,5 @@
-public func build<T>(@SingleParameterFunctionBuilder<T> _ builder: () -> (T) -> Void) -> (T) -> Void {
+import Elementary
+
+public func build<State, Action>(@EffectBuilder<State, Action> _ builder: () -> Effect<State, Action>) -> Effect<State, Action> {
     builder()
 }
