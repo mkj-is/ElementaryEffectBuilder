@@ -5,7 +5,7 @@ public final class EffectBuilder<State, Action> {
     public typealias Component = Effect<State, Action>
 
     public static func buildBlock(_ components: Component...) -> Component {
-        combine(effects: components)
+        join(effects: components)
     }
 
     public static func buildIf(_ component: Component?) -> Component {
