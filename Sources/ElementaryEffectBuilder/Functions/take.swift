@@ -10,3 +10,19 @@ public func take<State, Action: Equatable>(
         }
     }
 }
+
+public func take<State, Action, Subaction> (
+    _ matching: Subaction.Type,
+    execute effect: @escaping Effect<State, Subaction>
+) -> Effect<State, Action> {
+    { getState, action, dispatch in
+        if let subaction = action as? Subaction {
+            let subdispatch: Dispatch<Subaction> = { subaction in
+                if let action = subaction as? Action {
+                    dispatch(action)
+                }
+            }
+            effect(getState, subaction, subdispatch)
+        }
+    }
+}
