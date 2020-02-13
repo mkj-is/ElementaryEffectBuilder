@@ -3,7 +3,7 @@ import XCTest
 
 final class ElementaryEffectBuilderTests: XCTestCase {
     func testExample() {
-        XCTAssertEqual(true)
+        XCTAssertTrue(true)
     }
 
     static var allTests = [
