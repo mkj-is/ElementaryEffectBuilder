@@ -7,6 +7,6 @@ final class ElementaryEffectBuilderTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testExample", testExample)
     ]
 }
