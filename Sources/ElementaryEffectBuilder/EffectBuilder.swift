@@ -1,6 +1,6 @@
 import Elementary
 
-@_functionBuilder
+@resultBuilder
 public final class EffectBuilder<State, Action> {
     public typealias Component = Effect<State, Action>
 
